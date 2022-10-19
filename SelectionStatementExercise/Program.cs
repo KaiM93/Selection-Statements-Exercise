@@ -19,11 +19,11 @@
 
             var guess = int.Parse(Console.ReadLine());
 
-            if(guess > number)
+            if (guess > number)
             {
                 Console.WriteLine("Your guess is too high, sorry.");
             }
-            else if(guess < number)
+            else if (guess < number)
             {
                 Console.WriteLine("Your guess is too low, try again.");
             }
@@ -31,6 +31,42 @@
             {
                 Console.WriteLine("Correct!");
             }
+        }
+
+    }
+
+    static void Main(string[] args)
+
+    {
+        Console.WriteLine("What is your favorite school subject?");
+
+        var subject = Console.ReadLine(); //evaluate to a string
+
+        switch (subject.ToLower())
+        {
+            case "Math":
+                Console.WriteLine("Math is very difficult.");
+                break;
+
+            case "Science":
+                Console.WriteLine("Science can be very interesting.");
+                break;
+
+            case "Latin":
+                Console.WriteLine("Latin is very cool.");
+                break;
+
+            case "PE":
+                Console.WriteLine("PE is good for the body.");
+                break;
+
+            case "English":
+                Console.WriteLine("English can be boring sometimes.");
+                break;
+
+            default:
+                Console.WriteLine("Oh interesting, I've never had that subject before. {subject} sounds fun.");
+                break;
         }
     }
 }
